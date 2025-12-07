@@ -1,8 +1,4 @@
-/* =========================================
-   Структура, Навігація, Футер
-   ========================================= */
 
-/* КОНТЕЙНЕРИ */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -10,9 +6,6 @@
 }
 .section-padding { padding: 80px 0; }
 
-/* =========================================
-   НАВІГАЦІЯ 
-   ========================================= */
 .navbar-top {
     background-color: #EEE8DF;
     font-family: 'Sansita', sans-serif;
@@ -29,7 +22,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 70px; /* Фіксуємо висоту панелі */
+    height: 70px; 
 }
 
 /* Логотип */
@@ -94,9 +87,7 @@
     color: #8C6A5A !important;                
 }
 
-/* =========================================
-   АДАПТИВНІСТЬ МЕНЮ (Мобільні)
-   ========================================= */
+
 @media (max-width: 992px) {
     
     /* Показуємо кнопку бургер */
@@ -195,21 +186,19 @@ footer select {
     font-size: 2rem;                          /* Розмір іконки */
     padding: 5px;
     cursor: pointer;
-    display: none; /* На комп'ютері ховаємо */
+    display: none; 
 }
 
-/* Показуємо кнопку тільки на мобільних */
+
 @media (max-width: 992px) {
     .navbar-toggler {
         display: block;
     }
 }
 
-/* =========================================
-   ЗАВДАННЯ 3.2: Клас для підсвітки меню через JS
-   ========================================= */
+
 .js-nav-active {
-    color: #8C6A5A !important; /* Акцентний колір */
-    text-decoration: underline !important; /* Підкреслення */
+    color: #8C6A5A !important; 
+    text-decoration: underline !important; 
     transition: all 0.3s ease;
 }
