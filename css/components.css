@@ -1,8 +1,4 @@
-/* =========================================
-   Банери, Картки, Спеціальні форми
-   ========================================= */
 
-/* HERO SECTION */
 .hero, .hero-about, .hero-catalog, .hero-contact, .hero-reviews {
     position: relative; width: 100%; height: 90vh; overflow: hidden;
 }
@@ -68,12 +64,10 @@
 .gallery-overlay a:hover i { transform: translateX(4px); }
 
 
-/* ======
-   ТУРИ
-   ====== */
+
 .catalog { padding: 60px 0; }
 
-/* СІТКА */
+
 .tour-gallery, .tour-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -81,7 +75,7 @@
     margin-top: 30px;
 }
 
-/* КАРТКА */
+
 .tour-item {
     background-color: #EEE8DF; 
     border-radius: 12px; 
@@ -102,26 +96,25 @@
 /* ЗОБРАЖЕННЯ */
 .tour-item img, .tour-img {
     width: 100%; 
-    height: 250px !important; /* Трохи зменшив висоту для 4 колонок, щоб виглядало пропорційно */
+    height: 250px !important; 
     object-fit: cover; 
     display: block;
     margin: 0;
 }
 
-/* Контент картки */
+
 .tour-content { padding: 15px; flex-grow: 1; text-align: left; }
 .tour-title { color: #2C365A !important; font-size: 1.2rem; margin-top: 0; margin-bottom: 10px; font-weight: bold; }
 .tour-meta { font-size: 0.9rem; color: #2C365A !important; margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 8px; }
 .tour-desc { font-size: 0.95rem; color: #2C365A !important; line-height: 1.5; margin-bottom: 15px; }
 
-/* Футер картки */
+
 .tour-footer {
     border-top: 1px solid #EEE8DF; padding: 15px;
     display: flex; justify-content: space-between; align-items: center; background-color: #EEE8DF;
 }
 .tour-price { font-size: 1.3rem; font-weight: 900; color: #2C365A !important; margin: 0; }
 
-/* Кнопка BOOK NOW */
 .btn-book-now {
     background-color: #2C365A !important; color: #EEE8DF !important;
     border: 1px solid #2C365A !important; padding: 8px 15px; border-radius: 8px;
@@ -132,7 +125,7 @@
     background-color: #C4BCB0 !important; color: #2C365A !important; border: 1px solid #2C365A !important;
 }
 
-/* ОВЕРЛЕЙ ТУРІВ */
+
 .tour-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(to top, rgba(44, 54, 90, 0.9), rgba(44, 54, 90, 0.1));
@@ -152,34 +145,32 @@
 }
 .tour-overlay a:hover { color: #fff; border-color: #fff; }
 
-/* АДАПТИВНІСТЬ ДЛЯ 4 КОЛОНОК */
 @media (max-width: 1100px) {
     .tour-gallery, .tour-grid {
-        grid-template-columns: repeat(2, 1fr); /* На планшетах - 2 колонки */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 @media (max-width: 600px) {
     .tour-gallery, .tour-grid {
-        grid-template-columns: 1fr; /* На телефонах - 1 колонка */
+        grid-template-columns: 1fr; 
     }
 }
 
 
 
 
-/* ВІДГУКИ  */
 .reviews-section { padding: 120px 0 !important; background-color: #EEE8DF; }
 .testimonials-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px; max-width: 1200px; margin: 0 auto;
 }
-/* Картка відгуку (без рамки) */
+
 .testimonial-card {
     background: rgba(255, 255, 255, 0.7); 
     padding: 30px; 
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-    /* border: ... - ПРИБРАНО */
+
     transition: transform 0.3s ease;
 }
 .testimonial-card:hover { transform: translateY(-5px); }
@@ -190,7 +181,7 @@
 .author-name { font-weight: bold; color: #2C365A !important; margin: 0; }
 .author-location { font-size: 0.95rem; color: #2C365A !important; margin: 0; }
 
-/* Стилі для testimonial.html */
+
 .testimonials { padding: 100px 0; max-width: 1200px; margin: 0 auto; }
 .testimonials h2 {
     font-family: 'Sansita', sans-serif; font-size: 2rem; text-align: center !important;
@@ -210,9 +201,6 @@
 .t-text { margin: 8px 0 0 0; line-height: 1.6; font-size: 1.05rem; font-family: 'Crimson Text', serif; color: #2C365A !important; }
 
 
-/* ========
-   ФІЛЬТРИ 
-   ======== */
 
 .tour-filters {
     display: flex;
@@ -243,7 +231,6 @@
     white-space: nowrap; 
 }
 
-/* Стилі для селектів у фільтрах  */
 .tour-filters select,
 .tour-filters select:valid,
 .tour-filters select:valid:not(:placeholder-shown) {
@@ -272,7 +259,7 @@
     border-color: #2C365A !important;
 }
 
-/* Кнопка APPLY FILTERS */
+
 .tour-filters button#apply-filters {
     background-color: #2C365A !important; 
     color: #EEE8DF !important;            
@@ -289,14 +276,14 @@
     white-space: nowrap;
 }
 
-/* Ховер ефект */
+
 .tour-filters button#apply-filters:hover {
     background-color: #C4BCB0 !important; 
     color: #2C365A !important;            
     border: 1px solid #2C365A;            
 }
 
-/* Адаптивність */
+
 @media (max-width: 992px) {
     .tour-filters {
         flex-direction: column; 
@@ -312,7 +299,7 @@
     }
 }
 
-/* ФОРМА БРОНЮВАННЯ (Booking) */
+
 .booking-section-bg {
     background-color: #C4BCB0; background-size: cover; background-position: center;
     position: relative; z-index: 1; padding-bottom: 100px !important;
@@ -369,7 +356,7 @@
     padding-right: 40px; cursor: pointer;
 }
 
-/* ФОРМА ПІДПИСКИ (Subscribe) */
+
 .subscribe-section {
     background-color: #2C365A; padding: 80px 0; position: relative; border-bottom: 1px solid #C4BCB0;
 }
@@ -403,7 +390,7 @@
     background-color: #2C365A; color: #EEE8DF; border: 1px solid #EEE8DF;
 }
 
-/* СТОРІНКА КОНТАКТІВ */
+
 .contact-info-section { background-color: #EEE8DF; padding: 80px 0; }
 .contact-split-wrapper {
     display: flex; flex-wrap: wrap; justify-content: space-between;
@@ -449,7 +436,7 @@
     background-color: #C4BCB0; color: #2C365A; border-color: #2C365A;
 }
 
-/* ВАЛІДАЦІЯ */
+
 input:not([type="submit"]):not([type="button"]):valid:not(:placeholder-shown),
 textarea:valid:not(:placeholder-shown),
 select:valid:not(:placeholder-shown) {
@@ -464,7 +451,6 @@ textarea:invalid:not(:placeholder-shown) {
 }
 input:focus, textarea:focus, select:focus { outline: none; }
 
-/* Адаптивність */
 @media (max-width: 992px) {
     .tour-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .tour-filters { flex-wrap: wrap; }
@@ -479,9 +465,7 @@ input:focus, textarea:focus, select:focus { outline: none; }
     .filter-group { width: 100%; }
 }
 
-/* =========================================
-   АДАПТИВНІСТЬ (MOBILE FIXES)
-   ========================================= */
+
 
 @media (max-width: 768px) {
     
