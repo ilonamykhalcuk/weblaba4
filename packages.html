@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wild Route - Tourism Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+    <body>
+
+    <nav class="navbar-top">
+        <div class="container nav-container">
+            
+            <a href="index.html" class="nav-logo-link">
+                <img src="img/logo-wild-route.svg" alt="Wild Route Logo" class="navbar-logo-img">
+            </a>
+
+            <button class="navbar-toggler" id="mobile-menu-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <ul class="navbar-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="packages.html">Catalog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonial.html">Reviews</a></li>
+                
+                <li><a href="#" id="theme-toggle">Theme</a></li>
+                
+                <li class="nav-login"><a href="#">Login</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <script src="js/main.js"></script>
+
+    <section class="hero-catalog" style="height: 100vh; min-height: 400px; overflow: hidden; position: relative;">
+      <img src="img/main-catalog.jpg" alt="Hero image">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>Travel Catalog</h1>
+      </div>
+    </section>
+
+
+<div class="container-fluid catalog">
+  <div class="container">
+    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+      <h5 class="section-title px-3">Catalog</h5>
+      <h1 class="mb-0">Awesome Proposals</h1>
+    </div>
+    <div class="tour-filters">
+    
+    <div class="filter-group">
+        <label for="city-filter">City:</label>
+        <select id="city-filter" name="city-filter">
+            <option value="all">All Destinations</option>
+            <option value="venice">Venice, Italy</option>
+            <option value="california">California, USA</option>
+            <option value="japan">Japan</option>
+            <option value="thailand">Thailand</option>
+            <option value="safari">Kenya/Tanzania</option>
+            <option value="peru">Peru</option>
+        </select>
+    </div>
+
+    <div class="filter-group">
+        <label for="duration-filter">Duration:</label>
+        <select id="duration-filter" name="duration-filter">
+            <option value="all">Any</option>
+            <option value="3">3 Days</option>
+            <option value="5">5 Days</option>
+            <option value="7">7 Days</option>
+        </select>
+    </div>
+    
+    <div class="filter-group">
+        <label for="price-filter">Price:</label>
+        <select id="price-filter" name="price-filter">
+            <option value="all">Any Price</option>
+            <option value="low">Under $500</option>
+            <option value="medium">$500 - $1000</option>
+            <option value="high">Over $1000</option>
+        </select>
+    </div>
+    
+    <button id="apply-filters">Apply Filters</button>
+</div>
+
+    <div class="row tour-grid">
+      
+      <article class="tour-item">
+        <img src="img/venice.jpg" alt="Venice, Italy" class="tour-img">
+        <div class="tour-content">
+            <h5 class="tour-title">Venice — Italy</h5>
+            <div class="tour-meta">
+                <span><i class="fa fa-map-marker-alt"></i>Venice, Italy</span>
+                <span><i class="fa fa-calendar-alt"></i>3 days</span>
+                <span><i class="fa fa-user"></i>2 Person</span>
+            </div>
+            <div class="tour-stars">
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+            </div>
+            <p class="tour-desc">Glide by gondola and wander hidden calli before a sunset spritz on St. Mark’s Square.</p>
+        </div>
+        <div class="tour-footer">
+            <div class="tour-price">$349.00</div>
+            <a href="#" class="btn-book-now">Book Now</a>
+        </div>
+      </article>
+
+      <article class="tour-item">
+        <img src="img/californiia.jpg" alt="California, USA" class="tour-img">
+        <div class="tour-content">
+            <h5 class="tour-title">The New California</h5>
+            <div class="tour-meta">
+                <span><i class="fa fa-map-marker-alt"></i>California, USA</span>
+                <span><i class="fa fa-calendar-alt"></i>3 days</span>
+                <span><i class="fa fa-user"></i>2 Person</span>
+            </div>
+            <div class="tour-stars">
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+            </div>
+            <p class="tour-desc">Cruise the Pacific Coast, taste Napa flavors, and chase golden-hour beaches on one effortless escape.</p>
+        </div>
+        <div class="tour-footer">
+            <div class="tour-price">$449.00</div>
+            <a href="#" class="btn-book-now">Book Now</a>
+        </div>
+      </article>
+
+      <article class="tour-item">
+        <img src="img/japan.jpg" alt="Japan" class="tour-img">
+        <div class="tour-content">
+            <h5 class="tour-title">Discover Japan</h5>
+            <div class="tour-meta">
+                <span><i class="fa fa-map-marker-alt"></i>Japan</span>
+                <span><i class="fa fa-calendar-alt"></i>3 days</span>
+                <span><i class="fa fa-user"></i>2 Person</span>
+            </div>
+            <div class="tour-stars">
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+            </div>
+            <p class="tour-desc">From neon-lit Tokyo to tranquil Kyoto shrines, dive into Japan’s dazzling contrasts with ease.</p>
+        </div>
+        <div class="tour-footer">
+            <div class="tour-price">$549.00</div>
+            <a href="#" class="btn-book-now">Book Now</a>
+        </div>
+      </article>
+
+      <article class="tour-item">
+        <img src="img/thailand.jpg" alt="Thailand" class="tour-img">
+        <div class="tour-content">
+            <h5 class="tour-title">Thailand Trip</h5>
+            <div class="tour-meta">
+                <span><i class="fa fa-map-marker-alt"></i>Thailand</span>
+                <span><i class="fa fa-calendar-alt"></i>3 days</span>
+                <span><i class="fa fa-user"></i>2 Person</span>
+            </div>
+            <div class="tour-stars">
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+            </div>
+            <p class="tour-desc">Island-hop turquoise bays and savor buzzing night-market flavors on a vibrant Thai adventure.</p>
+        </div>
+        <div class="tour-footer">
+            <div class="tour-price">$649.00</div>
+            <a href="#" class="btn-book-now">Book Now</a>
+        </div>
+      </article>
+      
+      <article class="tour-item">
+        <img src="img/safari.jpg" alt="African Safari" class="tour-img">
+        <div class="tour-content">
+            <h5 class="tour-title">African Safari</h5>
+            <div class="tour-meta">
+                <span><i class="fa fa-map-marker-alt"></i>Kenya/Tanzania</span>
+                <span><i class="fa fa-calendar-alt"></i>7 days</span>
+                <span><i class="fa fa-user"></i>2 Person</span>
+            </div>
+            <div class="tour-stars">
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+            </div>
+            <p class="tour-desc">Witness the Great Migration and the Big Five on an unforgettable journey through the savannah.</p>
+        </div>
+        <div class="tour-footer">
+            <div class="tour-price">$1899.00</div>
+            <a href="#" class="btn-book-now">Book Now</a>
+        </div>
+      </article>
+
+      <article class="tour-item">
+        <img src="img/peru.jpg" alt="Machu Picchu" class="tour-img">
+        <div class="tour-content">
+            <h5 class="tour-title">Machu Picchu Trek</h5>
+            <div class="tour-meta">
+                <span><i class="fa fa-map-marker-alt"></i>Peru</span>
+                <span><i class="fa fa-calendar-alt"></i>5 days</span>
+                <span><i class="fa fa-user"></i>1 Person</span>
+            </div>
+            <div class="tour-stars">
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+            </div>
+            <p class="tour-desc">Hike the Inca Trail to the lost city of the Incas, a truly breathtaking experience.</p>
+        </div>
+        <div class="tour-footer">
+            <div class="tour-price">$999.00</div>
+            <a href="#" class="btn-book-now">Book Now</a>
+        </div>
+      </article>
+      
+    </div>
+  </div>
+</div>
+
+<section class="subscribe-section">
+    <div class="container">
+        <h3>Stay Updated with Wild Route</h3>
+        <form class="subscribe-form">
+            <label for="emailSubscribe">Subscribe to our newsletter:</label>
+            <div class="subscribe-input-group">
+                <input type="email" id="emailSubscribe" name="emailSubscribe" placeholder="Your Email">
+                <button type="submit">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</section>
+<footer>
+        <div class="container">
+            <div>
+              <h3>Get In Touch</h3>
+              <p>123 Street, Kyiv, Ukraine</p>
+              <p>info@wildroute.com</p>
+              <p>+380 68 678 22 90</p>
+            </div>
+    
+            <div>
+              <h3>Company</h3>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+    
+            <div>
+              <h3>Support</h3>
+              <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+    
+            <div>
+              <h3>Language & Currency</h3>
+              <form>
+                <label for="language">Language:</label>
+                <select id="language" name="language">
+                  <option>English</option>
+                  <option>Ukrainian</option>
+                </select>
+              </form>
+    
+              <form>
+                <label for="currency">Currency:</label>
+                <select id="currency" name="currency">
+                  <option>USD</option>
+                  <option>EUR</option>
+                </select>
+              </form>
+    
+              <h3>Payments</h3>
+              <p>We accept all major cards and PayPal.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Wild Route, All rights reserved. Designed by ka34</p>
+        </div>
+    </footer>
+
+
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    </body>
+
+</html>

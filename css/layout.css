@@ -1,0 +1,215 @@
+/* =========================================
+   Структура, Навігація, Футер
+   ========================================= */
+
+/* КОНТЕЙНЕРИ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-padding { padding: 80px 0; }
+
+/* =========================================
+   НАВІГАЦІЯ 
+   ========================================= */
+.navbar-top {
+    background-color: #EEE8DF;
+    font-family: 'Sansita', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #C4BCB0; 
+    width: 100%;
+}
+
+/* Контейнер всередині навбару для вирівнювання */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px; /* Фіксуємо висоту панелі */
+}
+
+/* Логотип */
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+}
+.navbar-logo-img {
+    height: 40px; 
+    width: auto;
+    display: block; 
+}
+
+/* Кнопка Бургер */
+.navbar-toggler {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #2C365A;
+    cursor: pointer;
+}
+
+/* Меню  */
+.navbar-menu {
+    display: flex;         
+    align-items: center;     
+    list-style: none;      
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.navbar-menu li { margin: 0; }
+
+.navbar-menu a {
+    display: block;
+    color: #2C365A;
+    text-decoration: none;
+    padding: 10px 15px;   
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap; 
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #8C6A5A;
+}
+
+.nav-login a {
+    border: none !important;       
+    background: none !important;   
+    border-radius: 0;              
+    padding: 10px 15px !important; 
+    margin-left: 0;
+    color: #2C365A !important;     
+}
+
+.nav-login a:hover {
+    background-color: transparent !important; 
+    color: #8C6A5A !important;                
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ МЕНЮ (Мобільні)
+   ========================================= */
+@media (max-width: 992px) {
+    
+    /* Показуємо кнопку бургер */
+    .navbar-toggler {
+        display: block; 
+    }
+
+    /* Ховаємо меню і налаштовуємо випадання */
+    .navbar-menu {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #EEE8DF;
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #C4BCB0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+  
+    .navbar-menu.active {
+        display: flex; 
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-menu a {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav-login a {
+        margin-left: 0;
+        margin-top: 10px;
+        display: inline-block;
+        width: auto;
+    }
+}
+
+/* ФУТЕР */
+footer {
+    background-color: #2C365A;
+    color: #EEE8DF;
+    padding: 30px 0 20px;
+    margin-top: auto;
+}
+footer .container {
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 40px; align-items: flex-start;
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+}
+footer .container > div { flex: 1; min-width: 200px; }
+
+footer h3 {
+    font-family: 'Sansita', sans-serif; color: #fff; font-size: 1.3rem;
+    margin-bottom: 15px; border-bottom: 1px solid #8C6A5A;
+    display: inline-block; padding-bottom: 5px;
+}
+footer p, footer li {
+    font-family: 'Crimson Text', serif; margin-bottom: 8px; font-size: 0.95rem;
+}
+footer ul { list-style: none; padding: 0; }
+footer a { color: #C4BCB0; transition: color 0.3s; }
+footer a:hover { color: #fff; text-decoration: underline; }
+
+/* Компактні форми футера */
+footer form {
+    background: transparent !important; padding: 0 !important; border: none !important;
+    margin: 0 0 10px 0 !important; box-shadow: none !important;
+}
+footer label {
+    color: #C4BCB0; font-size: 0.85rem; margin-bottom: 2px; font-weight: normal; display: block;
+}
+footer select {
+    width: 100%; max-width: 150px; padding: 4px 8px; font-size: 0.9rem;
+    background-color: #1a223f; color: #fff; border: 1px solid #555;
+    border-radius: 4px; margin-bottom: 0; height: auto;
+}
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1); margin-top: 20px;
+    padding-top: 15px; text-align: center; font-size: 0.8rem; color: #888; width: 100%;
+}
+
+/* Стиль для кнопки мобільного меню */
+.navbar-toggler {
+    background-color: transparent !important; /* Прибираємо синій фон */
+    border: none !important;                  /* Прибираємо рамку */
+    color: #2C365A !important;                /* Колір самих смужок (іконки) */
+    font-size: 2rem;                          /* Розмір іконки */
+    padding: 5px;
+    cursor: pointer;
+    display: none; /* На комп'ютері ховаємо */
+}
+
+/* Показуємо кнопку тільки на мобільних */
+@media (max-width: 992px) {
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+/* =========================================
+   ЗАВДАННЯ 3.2: Клас для підсвітки меню через JS
+   ========================================= */
+.js-nav-active {
+    color: #8C6A5A !important; /* Акцентний колір */
+    text-decoration: underline !important; /* Підкреслення */
+    transition: all 0.3s ease;
+}

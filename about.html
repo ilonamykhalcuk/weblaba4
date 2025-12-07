@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Wild Route - Tourism Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <nav class="navbar-top">
+        <div class="container nav-container">
+            
+            <a href="index.html" class="nav-logo-link">
+                <img src="img/logo-wild-route.svg" alt="Wild Route Logo" class="navbar-logo-img">
+            </a>
+
+            <button class="navbar-toggler" id="mobile-menu-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <ul class="navbar-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="packages.html">Catalog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonial.html">Reviews</a></li>
+                
+                <li><a href="#" id="theme-toggle">Theme</a></li>
+                
+                <li class="nav-login"><a href="#">Login</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <section class="hero-about" style="height: 60vh; min-height: 400px; overflow: hidden; position: relative;">
+      <img src="img/main-about.jpg" alt="Hero image">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>About Us</h1>
+      </div>
+    </section>
+        
+    <section class="section-padding">
+        <div class="container text-center">
+            
+            <h2 class="main-heading">Welcome to Wild Route</h2>
+            
+            <p>At Wild Route, we believe that travel isn’t just about destinations — it’s about experiences that stay with you for a lifetime!</p>
+            <p>Our team of passionate explorers curates unique routes that take you beyond the ordinary — from hidden mountain trails and island getaways to cultural adventures across continents.</p>
+            
+            <span id="more-text" style="display: none;">
+                <p>Every journey we create is designed with care, comfort, and curiosity in mind. Whether you’re looking for a luxurious escape, a family holiday, or a wild adventure off the beaten path, we make sure every moment feels effortless and unforgettable.</p>
+                <p>Join us and discover the world like never before. We take care of the details so you can focus on making memories.</p>
+            </span>
+          
+            <ul style="list-style: none; padding: 0; margin: 30px 0;">
+              <li><i class="fa fa-check text-primary"></i> First Class Flights</li>
+              <li><i class="fa fa-check text-primary"></i> Handpicked Hotels</li>
+              <li><i class="fa fa-check text-primary"></i> 5 Star Accommodations</li>
+              <li><i class="fa fa-check text-primary"></i> Latest Model Vehicles</li>
+              <li><i class="fa fa-check text-primary"></i> 24/7 Service</li>
+            </ul>
+          
+            <a href="#" id="read-more-btn" style="color: #2C365A; text-decoration: underline; font-weight: bold; font-size: 1.1rem; text-transform: uppercase; margin-top: 20px; display: inline-block;">Read More</a>        
+            
+            <p id="current-date" style="margin-top: 20px; font-size: 0.9rem; color: #777; font-family: 'Crimson Text', serif;"></p>
+        </div>
+    </section>
+        
+    <section class="subscribe-section">
+        <div class="container">
+            <h3>Stay Updated with Wild Route</h3>
+            <form class="subscribe-form">
+                <label for="emailSubscribe">Subscribe to our newsletter:</label>
+                <div class="subscribe-input-group">
+                    <input type="email" id="emailSubscribe" name="emailSubscribe" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+              <h3>Get In Touch</h3>
+              <p>123 Street, Kyiv, Ukraine</p>
+              <p>info@wildroute.com</p>
+              <p>+380 68 678 22 90</p>
+            </div>
+    
+            <div>
+              <h3>Company</h3>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+    
+            <div>
+              <h3>Support</h3>
+              <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </div>
+    
+            <div>
+              <h3>Language & Currency</h3>
+              <form>
+                <label for="language">Language:</label>
+                <select id="language" name="language">
+                  <option>English</option>
+                  <option>Ukrainian</option>
+                </select>
+              </form>
+    
+              <form>
+                <label for="currency">Currency:</label>
+                <select id="currency" name="currency">
+                  <option>USD</option>
+                  <option>EUR</option>
+                </select>
+              </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Wild Route, All rights reserved. Designed by ka34</p>
+        </div>
+    </footer>
+
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
