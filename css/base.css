@@ -1,8 +1,4 @@
-/* =========================================
-   Шрифти, Глобальні, Типографіка, Базові елементи
-   ========================================= */
 
-/* 1. ПІДКЛЮЧЕННЯ ШРИФТІВ */
 @font-face {
     font-family: 'Karima';
     src: url('../fonts/Karima.ttf') format('truetype');
@@ -28,7 +24,7 @@
     font-style: normal;
 }
 
-/* 2. ГЛОБАЛЬНІ НАЛАШТУВАННЯ */
+
 body {
     font-family: 'Crimson Text', serif; 
     font-size: 1rem;  
@@ -42,7 +38,7 @@ body {
     flex-direction: column;
 }
 
-/* 3. ТИПОГРАФІКА */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Sansita', sans-serif;
     font-weight: 700;
@@ -65,7 +61,7 @@ a:hover { color: #2C365A; }
 
 .text-center { text-align: center; }
 
-/* 4. БАЗОВІ СТИЛІ ФОРМ */
+
 form {
     background: #ffffff;
     padding: 30px;
@@ -101,7 +97,7 @@ input:focus, select:focus, textarea:focus {
     border-color: #2C365A;
 }
 
-/* 5. БАЗОВІ СТИЛІ КНОПОК */
+
 button, input[type="submit"], .btn-primary {
     font-family: 'Crimson Text', serif;
     font-weight: 700;
@@ -120,7 +116,7 @@ button:hover, input[type="submit"]:hover {
     background-color: #1a223f;
 }
 
-/* Додаткові класи центрування */
+
 .mx-auto { margin-left: auto !important; margin-right: auto !important; }
 .mb-5 { margin-bottom: 3rem !important; }
 .mb-0 { margin-bottom: 0 !important; }
@@ -128,25 +124,21 @@ button:hover, input[type="submit"]:hover {
 .section-title, .main-heading { text-align: center; }
 
 
-/* =========================================
-   ТЕМНА ТЕМА (Фінальна версія: Все синє)
-   ========================================= */
 
-/* 1. Глобальний фон і колір тексту */
 body.dark-theme {
     background-color: #1a223f !important; /* Темно-синій фон */
     color: #EEE8DF !important;            /* Світлий текст */
 }
 
-/* 2. Примусово перефарбовуємо ВСІ секції в синій */
+
 body.dark-theme .hero, 
 body.dark-theme .section-padding, 
 body.dark-theme .catalog, 
 body.dark-theme .tour-gallery, 
 body.dark-theme .tour-grid, 
 body.dark-theme .booking-section-bg, 
-body.dark-theme .reviews-section,      /* <--- ОСЬ ВОНО! */
-body.dark-theme .testimonials,         /* <--- І ЦЕ ТЕЖ */
+body.dark-theme .reviews-section,      
+body.dark-theme .testimonials,        
 body.dark-theme .contact-info-section, 
 body.dark-theme .contact-form-section,
 body.dark-theme .subscribe-section,
@@ -155,7 +147,7 @@ body.dark-theme footer {
     border-color: rgba(238, 232, 223, 0.1) !important;
 }
 
-/* 3. Тексти (заголовки, параграфи, посилання) */
+
 body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, 
 body.dark-theme h4, body.dark-theme h5, body.dark-theme h6,
 body.dark-theme p, body.dark-theme li, body.dark-theme span,
@@ -165,7 +157,7 @@ body.dark-theme .section-title {
     color: #EEE8DF !important;
 }
 
-/* 4. КАРТКИ (Тури, Відгуки) - Світліший синій для контрасту */
+
 body.dark-theme .tour-item,
 body.dark-theme .testimonial-card,
 body.dark-theme .info-card,
@@ -175,7 +167,7 @@ body.dark-theme .contact-card {
     box-shadow: none !important;
 }
 
-/* 5. Текст всередині карток */
+
 body.dark-theme .tour-title,
 body.dark-theme .tour-meta,
 body.dark-theme .tour-desc,
@@ -189,7 +181,7 @@ body.dark-theme .author-location {
     color: #EEE8DF !important;
 }
 
-/* 6. Поля вводу та кнопки */
+
 body.dark-theme input, 
 body.dark-theme textarea, 
 body.dark-theme select,
@@ -199,7 +191,7 @@ body.dark-theme .tour-filters {
     border: 1px solid #EEE8DF !important;
 }
 
-/* 7. Навігація */
+
 body.dark-theme .navbar-top,
 body.dark-theme .navbar-menu {
     background-color: #1a223f !important;
