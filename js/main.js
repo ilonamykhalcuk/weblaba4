@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // 1. БУРГЕР-МЕНЮ
+
     const menuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
     if (menuBtn && navMenu) {
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 2. ЛІЧИЛЬНИК
+
     const input = document.getElementById('personsInput');
     const minus = document.getElementById('personsMinus');
     const plus  = document.getElementById('personsPlus');
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 3. ТЕМА (Dark Theme)
+  
     const themeBtn = document.getElementById('theme-toggle');
     const body = document.body;
     if (localStorage.getItem('saved-theme') === 'dark') {
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 4. ДОДАТКОВІ ФУНКЦІЇ
+  
     const dateElement = document.getElementById('current-date');
     if (dateElement) {
         dateElement.textContent = "Today is: " + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -65,26 +64,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 5. ВАЛІДАЦІЯ ТА ВІДПРАВКА ФОРМИ (ЗАВДАННЯ 4.1 + 4.2)
     const allForms = document.querySelectorAll('form');
 
     if (allForms.length > 0) {
         allForms.forEach(form => {
             form.addEventListener('submit', function(event) {
-                // 1. Зупиняємо стандартну відправку
+             
                 event.preventDefault();
                 
-                // Очищаємо старі помилки
+                
                 clearValidation(form);
 
                 let isFormValid = true;
 
-                // --- ВАЛІДАЦІЯ ---
+           
                 const nameInput = form.querySelector('input[name="name"]') || form.querySelector('input[type="text"]');
                 const emailInput = form.querySelector('input[name="email"]') || form.querySelector('input[type="email"]');
                 const messageInput = form.querySelector('textarea');
 
-                // Перевірка Імені (3+ символи)
+                
                 if (nameInput) {
                     if (nameInput.value.trim().length < 3) {
                         setError(nameInput, "Name must be at least 3 characters long");
@@ -94,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
 
-                // Перевірка Email (@ і крапка)
+                
                 if (emailInput) {
                     const emailValue = emailInput.value.trim();
                     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -106,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
 
-                // Перевірка Повідомлення (10+ символів, якщо поле є)
+               
                 if (messageInput) {
                     if (messageInput.value.trim().length < 10) {
                         setError(messageInput, "Message is too short (min 10 characters)");
@@ -116,11 +114,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
 
-                // --- ЯКЩО ВСЕ ОК -> ВИВОДИМО ДАНІ ---
+               
                 if (isFormValid) {
                     const userName = nameInput ? nameInput.value : 'Guest';
                     
-                    // Збираємо дані для консолі (Завдання 4.1)
+                   
                     const formData = new FormData(form);
                     const dataObject = {};
                     formData.forEach((value, key) => { dataObject[key] = value; });
@@ -129,14 +127,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Data:', dataObject);
                     console.groupEnd();
 
-                    // Зберігаємо ім'я (Бонус)
+                
                     if (nameInput) localStorage.setItem('user_name', nameInput.value);
 
-                    // Повідомлення користувачу (Завдання 4.2)
+                  
                     alert(`Form successfully sent!\nThank you, ${userName}.`);
                     
                     form.reset(); 
-                    setTimeout(() => clearValidation(form), 2000); // Прибираємо зелені рамки через 2 сек
+                    setTimeout(() => clearValidation(form), 2000); 
                 } else {
                     console.warn('❌ Form validation failed');
                 }
@@ -144,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Допоміжні функції ---
+   
     function setError(input, message) {
         input.classList.add('invalid');
         input.classList.remove('valid');
@@ -170,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
         errors.forEach(error => error.remove());
     }
 
-    // 6. АВТОЗАПОВНЕННЯ ІМЕНІ (Бонус)
+    
     const nameFields = document.querySelectorAll('input[name="name"]');
     const savedName = localStorage.getItem('user_name');
     if (savedName) {
